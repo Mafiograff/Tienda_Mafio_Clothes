@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>Mafio_Clothes</title>
+</head>
+<body>
+
+<header>
+  <h1>Bienvenido a Mafio_Clothes</h1>
+  <img src="img/logo.png" alt="Logo Mafio_Clothes" class="logo" />
+</header>
+
+<nav>
+  <a href="#descripción">Inicio</a>
+  <a href="#galeria">Galería</a>
+  <a href="https://www.instagram.com/mafio_clothes/" target="_blank">Instagram</a>
+</nav>
+
+<section class="productos-container">
+  <div class="columna">
+    <section class="producto">
+      <img src="img/imagen1.png" alt="Chaleco Wisconsin Badgers 2012" class="imagen-producto" />
+      <div class="detalles">
+        <h2>Chaleco Wisconsin Badgers 2012</h2>
+        <p>Talla: M</p>
+        <p>Precio: 10.000</p>
+        <label><input type="checkbox" checked> Prenda disponible</label>
+      </div>
+    </section>
+
+    <section class="producto">
+      <img src="img/imagen2.png" alt="Gorro Fitleist" class="imagen-producto" />
+      <div class="detalles">
+        <h2>Gorro Fitleist</h2>
+        <p>Talla: Ajustable</p>
+        <p>Precio: 13.000</p>
+        <label><input type="checkbox" checked> Prenda disponible</label>
+      </div>
+    </section>
+
+    <section class="producto">
+      <img src="img/imagen3.png" alt="Chaqueta reversible" class="imagen-producto" />
+      <div class="detalles">
+        <h2>Chaqueta Reversible</h2>
+        <p>Talla: L</p>
+        <p>Precio: 15.000</p>
+        <label><input type="checkbox" checked> Prenda disponible</label>
+      </div>
+    </section>
+  </div>
+
+  <div class="columna">
+    <section class="producto">
+      <img src="img/imagen4.png" alt="Gorro New Era/Boston" class="imagen-producto" />
+      <div class="detalles">
+        <h2>Gorro New Era/Boston</h2>
+        <p>Talla: Ajustable</p>
+        <p>Precio: 12.000</p>
+        <label><input type="checkbox" checked> Prenda disponible</label>
+      </div>
+    </section>
+
+    <section class="producto">
+      <img src="img/imagen5.png" alt="Chaleco Maui" class="imagen-producto" />
+      <div class="detalles">
+        <h2>Chaleco Maui</h2>
+        <p>Talla: XL</p>
+        <p>Precio: 15.000</p>
+        <label><input type="checkbox" checked> Prenda disponible</label>
+      </div>
+    </section>
+  </div>
+</section>
+
+<section class="gallery" id="galeria">
+  <h2>Galería de productos</h2>
+  <button id="mostrarGaleria" class="boton-galeria">Ver galería</button>
+
+  <div class="grid-gallery" id="imagenesGaleria" style="display: none;">
+    <img src="img/imagen1.png" alt="Producto 1" class="imagen-galeria"/>
+    <img src="img/imagen2.png" alt="Producto 2" class="imagen-galeria"/>
+    <img src="img/imagen3.png" alt="Producto 3" class="imagen-galeria"/>
+    <img src="img/imagen4.png" alt="Producto 4" class="imagen-galeria"/>
+    <img src="img/imagen5.png" alt="Producto 5" class="imagen-galeria"/>
+    <img src="img/imagen6.png" alt="Producto 6" class="imagen-galeria"/>
+</div>
+
+</section>
+
+
+
+<footer>
+  <p>&copy; 2025 Mafio_Clothes. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+  document.getElementById("mostrarGaleria").addEventListener("click", function () {
+    const galeria = document.getElementById("imagenesGaleria");
+    if (galeria.style.display === "none" || galeria.style.display === "") {
+      galeria.style.display = "flex";
+      this.textContent = "Ocultar galería";
+    } else {
+      galeria.style.display = "none";
+      this.textContent = "Ver galería";
+    }
+  });
+</script>
+
+</body>
+
+
+</html>
