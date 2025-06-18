@@ -1,116 +1,212 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="style.css" />
   <title>Mafio_Clothes</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <header>
+    <h1>Bienvenido a Mafio_Clothes</h1>
+    <img src="img/logo.png" alt="Logo Mafio_Clothes" class="logo" />
+  </header>
 
-<header>
-  <h1>Bienvenido a Mafio_Clothes</h1>
-  <img src="img/logo.png" alt="Logo Mafio_Clothes" class="logo" />
-</header>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#galeria">Galería</a>
+    <a href="https://www.instagram.com/mafio_clothes/" target="_blank">Instagram</a>
+  </nav>
 
-<nav>
-  <a href="#descripción">Inicio</a>
-  <a href="#galeria">Galería</a>
-  <a href="https://www.instagram.com/mafio_clothes/" target="_blank">Instagram</a>
-</nav>
-
-<section class="productos-container">
-  <div class="columna">
+  <!-- INICIO DE PRODUCTOS -->
+  <section class="productos-container" id="inicio">
+    <div class="fila">
     <section class="producto">
-      <img src="img/imagen1.png" alt="Chaleco Wisconsin Badgers 2012" class="imagen-producto" />
-      <div class="detalles">
-        <h2>Chaleco Wisconsin Badgers 2012</h2>
-        <p>Talla: M</p>
-        <p>Precio: 10.000</p>
-        <label><input type="checkbox" checked> Prenda disponible</label>
-      </div>
-    </section>
-
-    <section class="producto">
-      <img src="img/imagen2.png" alt="Gorro Fitleist" class="imagen-producto" />
-      <div class="detalles">
-        <h2>Gorro Fitleist</h2>
-        <p>Talla: Ajustable</p>
-        <p>Precio: 13.000</p>
-        <label><input type="checkbox" checked> Prenda disponible</label>
-      </div>
-    </section>
-
-    <section class="producto">
-      <img src="img/imagen3.png" alt="Chaqueta reversible" class="imagen-producto" />
-      <div class="detalles">
-        <h2>Chaqueta Reversible</h2>
-        <p>Talla: L</p>
-        <p>Precio: 15.000</p>
-        <label><input type="checkbox" checked> Prenda disponible</label>
-      </div>
-    </section>
-  </div>
-
-  <div class="columna">
-    <section class="producto">
-      <img src="img/imagen4.png" alt="Gorro New Era/Boston" class="imagen-producto" />
-      <div class="detalles">
-        <h2>Gorro New Era/Boston</h2>
-        <p>Talla: Ajustable</p>
-        <p>Precio: 12.000</p>
-        <label><input type="checkbox" checked> Prenda disponible</label>
-      </div>
-    </section>
-
-    <section class="producto">
-      <img src="img/imagen5.png" alt="Chaleco Maui" class="imagen-producto" />
-      <div class="detalles">
-        <h2>Chaleco Maui</h2>
-        <p>Talla: XL</p>
-        <p>Precio: 15.000</p>
-        <label><input type="checkbox" checked> Prenda disponible</label>
-      </div>
-    </section>
+  <a href="https://www.instagram.com/p/DHeL63LOJK6/?img_index=1" target="_blank">
+    <img src="img/imagen1.png" alt="Chaleco Wisconsin Badgers 2012" class="imagen-producto" />
+  </a>
+  <div class="detalles">
+    <h2>Chaleco Wisconsin Badgers 2012</h2>
+    <p>Talla: M</p>
+    <p>Precio: 10.000</p>
+    <div class="estado-disponibilidad">
+      <input type="checkbox" class="chequed" checked disabled>
+      <span>Prenda Disponible</span>
+    </div>
   </div>
 </section>
 
-<section class="gallery" id="galeria">
-  <h2>Galería de productos</h2>
-  <button id="mostrarGaleria" class="boton-galeria">Ver galería</button>
 
-  <div class="grid-gallery" id="imagenesGaleria" style="display: none;">
-    <img src="img/imagen1.png" alt="Producto 1" class="imagen-galeria"/>
-    <img src="img/imagen2.png" alt="Producto 2" class="imagen-galeria"/>
-    <img src="img/imagen3.png" alt="Producto 3" class="imagen-galeria"/>
-    <img src="img/imagen4.png" alt="Producto 4" class="imagen-galeria"/>
-    <img src="img/imagen5.png" alt="Producto 5" class="imagen-galeria"/>
-    <img src="img/imagen6.png" alt="Producto 6" class="imagen-galeria"/>
-</div>
 
+      <section class="producto">
+  <a href="https://www.instagram.com/p/DHeJ_IqOnyH/?img_index=1" target="_blank">
+    <img src="img/imagen2.png" alt="Gorro Fitleist" class="imagen-producto" />
+  </a>
+  <div class="detalles">
+    <h2>Gorro Fitleist</h2>
+    <p>Talla: Ajustable</p>
+    <p>Precio: 13.000</p>
+    <div class="estado-disponibilidad">
+      <input type="checkbox" class="chequed" checked disabled>
+      <span>Prenda Disponible</span>
+    </div>
+  </div>
 </section>
 
+      <section class="producto">
+        <img src="img/imagen3.png" alt="Chaqueta Reversible" class="imagen-producto" />
+        <div class="detalles">
+          <h2>Chaqueta Reversible</h2>
+          <p>Talla: L</p>
+          <p>Precio: 15.000</p>
+          <div class="estado-disponibilidad">
+            <input type="checkbox" class="chequed" checked disabled>
+            <span>Prenda Disponible</span>
+          </div>
+        </div>
+      </section>
+    </div>
 
+    <div class="fila">
+      <section class="producto">
+        <img src="img/imagen4.png" alt="Gorro New Era/Boston" class="imagen-producto" />
+        <div class="detalles">
+          <h2>Gorro New Era/Boston</h2>
+          <p>Talla: Ajustable</p>
+          <p>Precio: 12.000</p>
+          <div class="estado-disponibilidad">
+            <input type="checkbox" class="chequed" checked disabled>
+            <span>Prenda Disponible</span>
+          </div>
+        </div>
+      </section>
 
-<footer>
-  <p>&copy; 2025 Mafio_Clothes. Todos los derechos reservados.</p>
-</footer>
+      <section class="producto">
+        <img src="img/imagen5.png" alt="Chaleco Maui" class="imagen-producto" />
+        <div class="detalles">
+          <h2>Chaleco Maui</h2>
+          <p>Talla: XL</p>
+          <p>Precio: 15.000</p>
+          <div class="estado-disponibilidad">
+            <input type="checkbox" class="chequed" checked disabled>
+            <span>Prenda Disponible</span>
+          </div>
+        </div>
+      </section>
 
+      <section class="producto">
+        <img src="img/imagen7.png" alt="Corta viento Adidas" class="imagen-producto" />
+        <div class="detalles">
+          <h2>Corta viento Adidas</h2>
+          <p>Talla: L</p>
+          <p>Precio: 7.000</p>
+          <div class="estado-disponibilidad">
+            <input type="checkbox" class="chequed" checked disabled>
+            <span>Prenda Disponible</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="fila">
+      <section class="producto">
+        <img src="img/imagen8.png" alt="Gorro California" class="imagen-producto" />
+        <div class="detalles">
+          <h2>Gorro California</h2>
+          <p>Talla: Ajustable</p>
+          <p>Precio: 7.000</p>
+          <div class="estado-disponibilidad">
+            <input type="checkbox" class="chequed" disabled>
+            <span>Prenda no Disponible</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="producto">
+        <img src="img/imagen9.png" alt="Chaleco Bulls" class="imagen-producto" />
+        <div class="detalles">
+          <h2>Chaleco Bulls</h2>
+          <p>Talla: L</p>
+          <p>Precio: 15.000</p>
+          <div class="estado-disponibilidad">
+            <input type="checkbox" class="chequed" disabled>
+            <span>Prenda no Disponible</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="producto">
+        <img src="img/imagen10.png" alt="Chaqueta Carhartt" class="imagen-producto" />
+        <div class="detalles">
+          <h2>Chaqueta Carhartt</h2>
+          <p>Talla: L</p>
+          <p>Precio: 20.000</p>
+          <div class="estado-disponibilidad">
+            <input type="checkbox" class="chequed" disabled>
+            <span>Prenda Disponible</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="fila">
+      <section class="producto">
+        <img src="img/imagen11.png" alt="Chaleco Staple" class="imagen-producto" />
+        <div class="detalles">
+          <h2>Chaleco Staple</h2>
+          <p>Talla: L</p>
+          <p>Precio: 20.000</p>
+          <div class="estado-disponibilidad">
+            <input type="checkbox" class="chequed" disabled>
+            <span>Prenda Disponible</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="gallery" id="galeria">
+    <h2>Galería de productos</h2>
+    <button id="mostrarGaleria" class="boton-galeria">Ver galería</button>
+    <div class="grid-gallery" id="imagenesGaleria" style="display: none;">
+      <img src="img/imagen1.png" alt="Producto 1" class="imagen-galeria" />
+      <img src="img/imagen2.png" alt="Producto 2" class="imagen-galeria" />
+      <img src="img/imagen3.png" alt="Producto 3" class="imagen-galeria" />
+      <img src="img/imagen4.png" alt="Producto 4" class="imagen-galeria" />
+      <img src="img/imagen5.png" alt="Producto 5" class="imagen-galeria" />
+      <img src="img/imagen6.png" alt="Producto 6" class="imagen-galeria" />
+      <img src="img/imagen7.png" alt="Producto 7" class="imagen-galeria" />
+      <img src="img/imagen8.png" alt="Producto 8" class="imagen-galeria" />
+      <img src="img/imagen9.png" alt="Producto 9" class="imagen-galeria" />
+      <img src="img/imagen10.png" alt="Producto 10" class="imagen-galeria" />
+      <img src="img/imagen11.png" alt="Producto 11" class="imagen-galeria" />
+    </div>
+  </section>
+  <!-- GALERÍA TOGGLE SCRIPT -->
 <script>
   document.getElementById("mostrarGaleria").addEventListener("click", function () {
     const galeria = document.getElementById("imagenesGaleria");
-    if (galeria.style.display === "none" || galeria.style.display === "") {
-      galeria.style.display = "flex";
-      this.textContent = "Ocultar galería";
-    } else {
-      galeria.style.display = "none";
-      this.textContent = "Ver galería";
-    }
+    const esVisible = galeria.style.display === "flex";
+
+    galeria.style.display = esVisible ? "none" : "flex";
+    this.textContent = esVisible ? "Ver galería" : "Ocultar galería";
   });
 </script>
 
-</body>
 
-
-</html>
+  <!-- FORMULARIO DE ENVÍOS -->
+<section id="formulario-envios">
+  <h2>Si necesitas envíos</h2>
+  <p>Para realizar un envío, necesito que ingreses tus datos aquí:</p>
+  <form action="#" method="post">
+    <input type="text" name="nombre" placeholder="Ingresa tu nombre completo" required>
+    <input type="email" name="correo" placeholder="Escribe tu correo electrónico" required>
+    <input type="text" name="direccion" placeholder="Escribe tu dirección" required>
+    <input type="text" name="retiro" placeholder="¿Sucursal o a domicilio?" required>
+    <input type="tel" name="telefono" placeholder="Ingresa tu número telefónico" required>
+    <input type="text" name="region" placeholder="Ingresa tu región" required>
+    <button type="submit">Enviar</button>
+  </form>
+</section>

@@ -1,288 +1,260 @@
-
-body {
-  background-color:#333;
-  font-family: 'Arial', sans-serif;
-  color: #ffffff;  /* Esto hace que todas las letras hereden blanco */
+/* Estilos generales */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-
-
-header {
-  text-align: center;
-  padding: 20px;
-  background-color:#6EF9F5;
-}
-
-.logo {
-  width: 160px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-nav {
-  display:flex;
-  justify-content:flex-start;
-  gap:15px;
-  padding:left 20px;
-  margin-top:40px;
-  margin-bottom:20px;
-}
-
-
-nav a {
-  display: inline-block;
-  background-color: #008cba;
-  color: white;
-  padding: 10px 20px;
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-nav a:hover {
-  background-color: red;
-  transform: scale(1.05);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-}
-
-.imagen-producto {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-  margin: 10px auto;
-  border: 3px solid red;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease;
-}
-
-.imagen-producto:hover {
-  transform: scale(1.05);
-}
-
-.productos-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space;
-  padding: 20px;
-}
-.fila {
-  display: flex;
-  gap: 20px;
-  justify-content: flex-start;
-  margin-bottom: 20px;
-}
-
-
-
-
-.producto {
-  width: 220px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%; /* importante si hay restricciones en el contenedor */
-  min-height: 360px; /* ajusta si necesitas que todas tengan la misma base */
-}
-
-
-.grid-gallery {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: left;
-  gap: 20px;
-  padding: 10px;
-  width: 100%;
-  align-items: left;
-}
-.columna {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: stretch; /* se asegura de que todas las tarjetas ocupen el mismo ancho */
-}
-
-
-
-
-.grid-gallery::-webkit-scrollbar {
-  height: 8px;
-}
-
-.grid-gallery::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 4px;
-}
-
-
-
-
-.imagen-galeria {
-  object-fit: cover;
-  object-position: center;
-}
-
-
-
-.imagen-galeria:hover {
-  transform: scale(1.05);
-}
-
-.boton-galeria {
-  background-color: #008cba;
-  color: white;
-  padding: 10px 20px;
-  margin: 10px 0; /* Eliminamos el auto para que se alinee a la izquierda */
-  text-align: left;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  display: inline-block; /* o block si quieres que ocupe toda la línea */
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.boton-galeria:hover {
-  background-color: red;
-  transform: scale(1.05);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-}
-
-.imagen-galeria {
-  width: 200px;
-  height: 200px;
-  object-fit: contain; /* Asegura que la imagen se ajuste sin recortarse */
-  border: 2px solid red;
-  border-radius: 10px;
-  flex-shrink: 0;
-  transition: transform 0.2s ease-in-out;
-}
-.relleno-total {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
+body {
+  background-color: #333;
+  color: #333;
+  line-height: 1.6;
+  
   
 }
 
-
-    h2 {
-      color: #333;
-    }
-
-    form {
-      background-color: white;
-      padding: 20px;
-      border-radius: 8px;
-      max-width: 400px;
-      margin: 0 auto;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    input {
-      display: block;
-      width: 90%;
-      margin: 10px auto;
-      padding: 12px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 4px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
-
-#formulario-envios {
-  text-align: left;
-  background-color: #63E2C6; /* Tu color original */
-  padding: 30px 20px;
+/* Encabezado */
+header {
+  background-color: #d00606;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
-#formulario-envios h2,
-#formulario-envios p {
-  color: #333;
-  margin-left: 10px;
+.logo {
+  width: 120px;
+  margin-top: 10px;
 }
 
-#formulario-envios form {
-  width: 100%;
-  max-width: 400px;
-  background-color: transparent; /* Sin fondo blanco */
-  margin-left: 10px;
+/* Menú de navegación */
+nav {
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 15px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-#formulario-envios input {
-  width: 90%;
-  padding: 12px;
-  font-size: 16px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-#formulario-envios button {
-  background-color: #4CAF50;
+nav a {
   color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
   font-size: 16px;
-  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-#formulario-envios button:hover {
-  background-color: #45a049;
+nav a:hover {
+  background-color: #e30a36; /* Verde neón al pasar el mouse */
+  color: #000;
 }
+
+
+/* Contenedor general de productos */
+.productos-container {
+  padding: 40px 20px;
+  justify-content: left;
+}
+
+/* Fila de productos */
+.fila {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+ 
+}
+
+/* Producto individual */
+.producto {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  width: 250px;
+  min-height: 430px;
+  text-align: center;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+}
+
+.imagen-producto {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+
+/* Detalles del producto */
+.detalles h2 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.detalles p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.estado-disponibilidad {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+/* Galería */
 .gallery {
   padding: 40px 20px;
-  text-align: left;
-  background-color: #1c1c1e;
+  background-color: #dd0a0a;
+  text-align: center;
+  color:white;
 }
 
-.gallery h2 {
-  color: #fafafa;
-  margin-left: 10px;
-  font-size: 24px;
+.grid-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: left;
 }
 
+.imagen-galeria {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 3px solid rgb(255, 255, 255);
+}
+
+
+.imagen-galeria:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+
+/* Botón de galería */
 .boton-galeria {
-  background-color: #63e2c6;
-  color: #1c1c1e;
-  padding: 12px 24px;
-  font-weight: bold;
-  border-radius: 8px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  margin-top: 12px;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
-  margin-left: 10px;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .boton-galeria:hover {
-  background-color: #4cd3b1;
+  background-color: #eb0936;
+  color: #000;
 }
+
+
+/* Formulario */
+#formulario-envios {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #d3d3d3; /* Marco gris claro */
+  border-radius: 12px;       /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  max-width: 500px;
+  margin-left: 20px;    
+  margin: 15px;     /* Alineado a la izquierda */
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0; /* ← ya no está centrado */
+}
+
+
+form input,
+form button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #f1154f;
+}
+
+/* Pie de página */
 footer {
-  background-color: #2c2c2e;
+  text-align: center;
   padding: 20px;
-  color: #aaaaaa;
-  text-align: left;
+  background-color: #222;
+  color: white;
+  margin-top: 40px;
+}
+/* Contenedor general para alinear todo a la izquierda */
+.contenido-principal {
+  max-width: 1200px;
+  margin: 0 auto 0 0; /* izquierda */
   padding-left: 20px;
+  text-align: left;
+}
+.estado-disponibilidad {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #222;
+  user-select: none;
+}
+
+.estado-disponibilidad .icono {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #28c087; /* verde para disponible */
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.estado-disponibilidad.no-disponible .icono {
+  background-color: #ff5e5e; /* rojo para no disponible */
+}
+
+/* Opcional, para que el texto quede más destacado */
+.estado-disponibilidad.disponible {
+  color: #28c087;
+}
+
+.estado-disponibilidad.no-disponible {
+  color: #ff5e5e;
 }
