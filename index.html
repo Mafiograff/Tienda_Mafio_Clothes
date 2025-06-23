@@ -245,27 +245,50 @@
   <h2>Si necesitas envíos</h2>
   <p>Para realizar un envío, necesito que ingreses tus datos aquí:</p>
 
-  <form action="https://formspree.io/f/xnnvgpov" method="POST">
-
-
-    <!-- Campos visibles -->
+  <form id="formulario-envio">
     <input type="text" name="nombre" placeholder="Ingresa tu nombre completo" required>
     <input type="email" name="correo" placeholder="Escribe tu correo electrónico" required>
     <input type="text" name="direccion" placeholder="Escribe tu dirección" required>
     <input type="text" name="retiro" placeholder="¿Sucursal o a domicilio?" required>
     <input type="tel" name="telefono" placeholder="Ingresa tu número telefónico" required>
     <input type="text" name="region" placeholder="Ingresa tu región" required>
-    <input type="text" name="prenda" placeholder="ingresa la prenda" required>
-
-    <!-- Campos ocultos de configuración -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://mafiograff.github.io/Tienda_Mafio_Clothes/gracias.html/?ok">
-
-
+    <input type="text" name="prenda" placeholder="Ingresa la prenda" required>
 
     <button type="submit">Enviar</button>
   </form>
+
+  <!-- Mensaje de éxito oculto -->
+  <div id="mensaje-exito" style="display: none; margin-top: 20px; text-align: center; background: #28c087; color: white; padding: 15px; border-radius: 10px;">
+    ✅ ¡Gracias por tu mensaje! Te estaré contactando pronto por Instagram o correo.
+  </div>
 </section>
+<!-- SCRIPT DE ENVÍO DE FORMULARIO -->
+<script>
+document.getElementById("formulario-envio").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const datos = new FormData(form);
+
+  try {
+    const res = await fetch("https://formspree.io/f/xnnvgpov", {
+      method: "POST",
+      body: datos,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (res.ok) {
+      form.reset();
+      document.getElementById("mensaje-exito").style.display = "block";
+    } else {
+      alert("Hubo un problema al enviar el formulario.");
+    }
+  } catch (error) {
+    alert("Error de red. Reintentá en unos segundos.");
+  }
+});
+</script>
+
 
 
 
