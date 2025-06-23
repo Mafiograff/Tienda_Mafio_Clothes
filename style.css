@@ -364,3 +364,19 @@ button:hover {
     width: 100%;
   }
 }
+@media (max-width: 768px) {
+  .fila {
+    justify-content: space-between;
+  }
+
+  .producto {
+    width: 48%;
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .producto {
+    width: 100%;
+  }
+}
