@@ -15,6 +15,8 @@
       <img src="img/imagenes graffitis/graffiti1.png" alt="Graffiti Izquierdo" class="graffiti-logo" />
       <img src="img/logo.png" alt="Logo Mafio_Clothes" class="logo" />
       <img src="img/imagenes graffitis/graffiti 2.png" alt="Graffiti Derecho" class="graffiti-logo" />
+      
+
     </div>
     
   </header>
@@ -23,6 +25,8 @@
     <a href="#inicio">Inicio</a>
     <a href="#galeria">Galería</a>
     <a href="https://www.instagram.com/mafio_clothes/" target="_blank">Instagram</a>
+    <a href="#formulario-y-video">Video Presentación</a>
+    
   </nav>
 </div>
 
@@ -1489,27 +1493,38 @@
 </script>
 
 
- <section id="formulario-envios">
-  <h2>Si necesitas envíos</h2>
-  <p>Para realizar un envío, necesito que ingreses tus datos aquí:</p>
+ <section class="seccion-flexible" id="formulario-y-video">
+  <!-- FORMULARIO A LA IZQUIERDA -->
+  <div id="formulario-envios">
+    <h2>Si necesitas envíos</h2>
+    <p>Para realizar un envío, necesito que ingreses tus datos aquí:</p>
 
-  <form id="formulario-envio">
-    <input type="text" name="nombre" placeholder="Ingresa tu nombre completo" required>
-    <input type="email" name="correo" placeholder="Escribe tu correo electrónico" required>
-    <input type="text" name="direccion" placeholder="Escribe tu dirección" required>
-    <input type="text" name="retiro" placeholder="¿Sucursal o a domicilio?" required>
-    <input type="tel" name="telefono" placeholder="Ingresa tu número telefónico" required>
-    <input type="text" name="region" placeholder="Ingresa tu región" required>
-    <input type="text" name="prenda" placeholder="Ingresa la prenda" required>
+    <form id="formulario-envio">
+      <input type="text" name="nombre" placeholder="Ingresa tu nombre completo" required>
+      <input type="email" name="correo" placeholder="Escribe tu correo electrónico" required>
+      <input type="text" name="direccion" placeholder="Escribe tu dirección" required>
+      <input type="text" name="retiro" placeholder="¿Sucursal o a domicilio?" required>
+      <input type="tel" name="telefono" placeholder="Ingresa tu número telefónico" required>
+      <input type="text" name="region" placeholder="Ingresa tu región" required>
+      <input type="text" name="prenda" placeholder="Ingresa la prenda" required>
+      <button type="submit">Enviar</button>
+    </form>
 
-    <button type="submit">Enviar</button>
-  </form>
+    <div id="mensaje-exito" style="display: none; margin-top: 20px; text-align: center; background: #28c087; color: white; padding: 15px; border-radius: 10px;">
+      ✅ ¡Gracias por tu compra! Me pondré en contacto contigo a la brevedad para coordinar el envío de tu paquete. ¡Que lo disfrutes!
+    </div>
+  </div>
 
-  <!-- Mensaje de éxito oculto -->
-  <div id="mensaje-exito" style="display: none; margin-top: 20px; text-align: center; background: #28c087; color: white; padding: 15px; border-radius: 10px;">
-    ✅ ¡Gracias por tu compra!. Me pondré en contacto contigo a la brevedad para coordinar el envío de tu paquete. ¡Que lo disfrutes
+  <!-- VIDEO A LA DERECHA -->
+  <div class="video-lateral">
+    <h2>Video de Presentación</h2>
+    <iframe width="100%" height="315"
+      src="https://www.youtube.com/embed/VvBZGhbcvZ4"
+      title="Presentación Mafio_Clothes"
+      frameborder="0" allowfullscreen></iframe>
   </div>
 </section>
+
 <!-- SCRIPT DE ENVÍO DE FORMULARIO -->
 <script>
 document.getElementById("formulario-envio").addEventListener("submit", async function(e) {
@@ -1536,6 +1551,8 @@ document.getElementById("formulario-envio").addEventListener("submit", async fun
   }
 });
 </script>
+
+
 
 
 
