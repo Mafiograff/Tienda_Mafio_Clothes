@@ -208,13 +208,13 @@ nav a:hover {
 #formulario-envios {
   padding: 40px 20px;
   background-color: #f9f9f9;
-  border: 2px solid #d3d3d3; /* Marco gris claro */
-  border-radius: 12px;       /* Bordes redondeados */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  border: 2px solid #d3d3d3;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   max-width: 500px;
-  margin-left: 20px;    
-  margin: 15px;     /* Alineado a la izquierda */
+  margin: 15px auto; /* ← este cambio centra y evita desbordamiento lateral */
 }
+
 
 
 form {
@@ -427,4 +427,32 @@ button:hover {
   max-height: 400px;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+body {
+  overflow-x: hidden;
+}
+@media (max-width: 768px) {
+  .seccion-flexible {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  #formulario-envios,
+  .video-lateral {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .video-lateral iframe {
+    max-width: 100%;
+    height: auto;
+  }
+}
+.video-lateral {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
 }
